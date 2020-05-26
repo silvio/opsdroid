@@ -68,6 +68,14 @@ tox
 
 Developing in containers can be a great way to ensure that opsdroid will run in a clean python environment and that all dependencies are captured.
 
+With the docker option '--build-args' a certain flavour of an image can be created for different purposes. Without this parameter a base image is created. The following flavours are currently supported:
+
+* base: The base image for testing opsdroid
+* dev: development
+* readthedocs: environment for generating the documentation
+* test: To run the test-suite
+
+
 ```shell
 # build the container
 docker build -t opsdroid/opsdroid:myfeature .
